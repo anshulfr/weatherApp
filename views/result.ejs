@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>
+        <%= placeSearchVar %> <%= tempVar %>°C
+        <img src="<%= iconVar %>" alt="icon" />
+      </h1>
+      <h3><%= dayVar %></h3>
+      <div class="container-fluid mt-4">
+        <div class="row justify-content-center">
+          <div class="col-auto col-lg-2 col-md-4 col-sm-6 mb-3">
+            <div class="card" style="width: 12rem">
+              <div class="card-body">
+                <h5 class="card-title">Feels Like</h5>
+                <%= feelsLikeVar %>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto col-lg-2 col-md-4 col-sm-6 mb-3">
+            <div class="card" style="width: 12rem">
+              <div class="card-body">
+                <h5 class="card-title">Pressure</h5>
+                <%= pressureVar %>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto col-lg-2 col-md-4 col-sm-6 mb-3">
+            <div class="card" style="width: 12rem">
+              <div class="card-body">
+                <h5 class="card-title">Humidity</h5>
+                <%= humidityVar %>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto col-lg-2 col-md-4 col-sm-6 mb-3">
+            <div class="card" style="width: 12rem">
+              <div class="card-body">
+                <h5 class="card-title">Wind Speed</h5>
+                <%= windSpeedVar %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
