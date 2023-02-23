@@ -4,7 +4,7 @@ A simple web application that retrieves the current weather data for a given loc
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
+1. Clone the repository: `git clone https://github.com/anshulnegii/weatherApp.git`
 2. Install dependencies: `npm install`
 3. Set up environment variables: Create a `.env` file with the following contents:
 ```
@@ -18,7 +18,7 @@ Replace `your_api_key_here` with your API key for the OpenWeatherMap API.
 
 ## Usage
 
-Enter the name of a city or a ZIP code in the search box and click "Search". The app will display the current weather data for that location.
+Enter the name of a city in the search box and click "Search". The app will display the current weather data for that location.
 
 ## Technologies Used
 
