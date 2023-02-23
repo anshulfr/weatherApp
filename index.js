@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/", (req, res) => {
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + req.body.place.replaceAll(" ", "+") + "&appid=0806d34c8dfcd028a68592ab149fa9e4&units=metric"
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + req.body.place.replace(/ /g, "+") + "&appid=0806d34c8dfcd028a68592ab149fa9e4&units=metric"
     https.get(url, (response) => {
         response.on("data", (data) => {
             const weatherData = JSON.parse(data)
