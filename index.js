@@ -16,6 +16,7 @@ app.post("/", (req, res) => {
     https.get(url, (response) => {
         response.on("data", (data) => {
             const weatherData = JSON.parse(data)
+            console.log(weatherData);
             const temp = weatherData.main.temp
             const timezone = weatherData.timezone
             const placeSearch = weatherData.name
