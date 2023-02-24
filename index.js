@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 require('dotenv').config();
+const apikey = process.env.API_KEY;
 const app = express();
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs')
@@ -15,7 +16,6 @@ app.get("/", (req, res) => {
 })
 
 app.post("/", (req, res) => {
-    const apikey = process.env.API_KEY;
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + req.body.place.replace(/ /g, "+") + "&appid=" + apikey + "&units=metric"
     https.get(url, (response) => {
         response.on("data", (data) => {
