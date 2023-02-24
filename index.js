@@ -15,7 +15,8 @@ app.get("/", (req, res) => {
 })
 
 app.post("/", (req, res) => {
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + req.body.place.replace(/ /g, "+") + "&appid=" + process.env.API_KEY + "&units=metric"
+    const apikey = process.env.API_KEY;
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + req.body.place.replace(/ /g, "+") + "&appid=" + apikey + "&units=metric"
     https.get(url, (response) => {
         response.on("data", (data) => {
             const weatherData = JSON.parse(data)
