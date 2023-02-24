@@ -12,8 +12,8 @@ A simple web application that retrieves the current weather data for a given loc
 .env
 API_KEY=your_api_key_here
 ```
-Replace `your_api_key_here` with your API key for the OpenWeatherMap API.
-4. Start the server: `node index.js`
+Replace `your_api_key_here` with your API key for the OpenWeatherMap API.\
+4. Start the server: `node index.js`\
 5. Open a web browser and go to `http://localhost:3000`
 
 ## Usage
